@@ -11,7 +11,7 @@ const Home = () => {
                     <div className="text-center xl:text-left">
                         <span className="text-xl">Machine Learning Engineer</span>
                         <h1 className="h1 mb-6">
-                            Hello, I'm <br /><span className="text-accent">Kashmith Nisakya</span>
+                            Hello, I&apos;m <br /><span className="text-accent">Kashmith Nisakya</span>
                         </h1>
                             <p className="max-w-[500px] mb-9 text-white/80">
                                 Passionate about solving real-world problems with data.
