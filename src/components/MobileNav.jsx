@@ -38,21 +38,29 @@ const MobileNav = () => {
             <CiMenuFries className="text-4xl" />
         </SheetTrigger>
         <SheetContent>
-            <nav className="flex flex-col gap-4">
-                {links.map((link, index) => {
-                    return (
-                        <Link
-                            href={link.path}
-                            key={index}
-                            className={`${
-                                link.path === pathname && "text-accent border-b-2 border-accent"
-                            } capitalize font-medium hover:text-accent transition-all`}
-                        >
-                            {link.name}
-                        </Link>
-                    );
-                })}
-            </nav>
+
+        <nav className="flex flex-col gap-4">
+            <Link href="/">
+                <h1 className="text-4xl font-semibold">
+                    Kashmith<span className="text-accent">.</span>
+                </h1>
+            </Link>
+        </nav>
+        <nav className="flex flex-col gap-4">
+            {links.map((link, index) => {
+                return (
+                    <Link
+                        href={link.path}
+                        key={index}
+                        className={`${
+                            link.path === pathname && "text-accent border-b-2 border-accent"
+                        } capitalize font-medium hover:text-accent transition-all`}
+                    >
+                        {link.name}
+                    </Link>
+                );
+            })}
+        </nav>
         </SheetContent>
     </Sheet>;
     }
