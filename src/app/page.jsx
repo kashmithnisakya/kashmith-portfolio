@@ -8,14 +8,14 @@ const Home = () => {
     return (
         <section className="h-full">
             <div className="container mx-auto h-full">
-                <div className="flex flex-col xl:flex-row items-center justify-between xl:pt-8 xl:pb-24">
+                <div className="flex flex-col xl:flex-row items-center justify-between xl:pt-8 xl:pb-20">
                     <div className="text-center xl:text-left order-2 xl:order-none">
                         <span className="text-xl">Machine Learning Engineer</span>
                         <h1 className="h1 mb-6">
                             Hello, I&apos;m <br /><span className="text-accent">Kashmith Nisakya</span>
                         </h1>
-                            <p className="max-w-[500px] mb-9 text-white/80">
-                                Passionate about solving real-world problems with data.
+                            <p className="max-w-[800px] mb-9 text-white/80">
+                            I&apos;m a Machine Learning Engineer passionate about solving complex problems. With expertise in ML, DL, and data science, I&apos;m ready for new challenges. Let&apos;s connect!
                             </p>
                             <div className="flex flex-col xl:flex-row items-center gap-8">
                             <a href="./Kashmith_Samaranayaka.pdf" download>
