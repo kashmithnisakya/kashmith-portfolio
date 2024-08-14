@@ -9,11 +9,11 @@ const Socials = ({containerStyles, iconStyles}) => {
             <a href="https://www.linkedin.com/in/kashmith-nisakya/" className="text-white hover:text-accent">
                 <FiLinkedin className= {iconStyles}/>
             </a>
-            <a href="https://x.com/nisakyamsk" className="text-white hover:text-accent">
-                <FiTwitter className={iconStyles} />
-            </a>
             <a href="https://www.facebook.com/profile.php?id=100010864363006&mibextid=LQQJ4d" className="text-white hover:text-accent">
                 <FiFacebook className={iconStyles} />
+            </a>
+            <a href="https://x.com/nisakyamsk" className="text-white hover:text-accent">
+                <FiTwitter className={iconStyles} />
             </a>
             <a href="mailto:kashmithnisakya@gmail.com" className="text-white hover:text-accent">
                 <FiMail className={iconStyles} />
