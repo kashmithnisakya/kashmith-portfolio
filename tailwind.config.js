@@ -29,7 +29,8 @@ module.exports = {
         accent: {
           DEFAULT: "#00ff99",
           hover: "#00e187", 
-        }
+        },
+        card: "#323238"
       },
       borderRadius: {
         lg: "var(--radius)",
