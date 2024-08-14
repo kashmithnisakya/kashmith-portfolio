@@ -18,10 +18,12 @@ const Home = () => {
                                 Passionate about solving real-world problems with data.
                             </p>
                             <div className="flex flex-col xl:flex-row items-center gap-8">
-                                <Button variant="outline" size="large" as="a" href="/resume.pdf" download className="uppercase flex items-center gap-2">
+                            <a href="/Kashmith_Samaranayaka.pdf" download>
+                                <Button variant="outline" size="large" className="uppercase flex items-center gap-2">
                                     <FiDownload className="text-xl"/>
                                     Download Resume
                                 </Button>
+                                </a>
                             <div className="mb-8 xl:mb-0">
                             <Socials containerStyles="flex gap-6" iconStyles="w-9 h-9 border-accent rounded flex justify-center item-center text-accent text-base hover:bg-accent hover:text-primary hover:transition-all duration-500"/>
                             </div>
