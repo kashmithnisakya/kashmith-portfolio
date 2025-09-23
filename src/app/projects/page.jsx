@@ -41,28 +41,23 @@ const Projects = () => {
           <div className="bg-card text-white rounded-xl shadow-lg hover:shadow-2xl hover:scale-105 transition duration-300">
             <div className="p-6">
               <div className="uppercase tracking-wide text-sm text-accent font-semibold">
-              Fourth Semester Individual Project
+              Industry Project
               </div>
               <a
-                href="https://github.com/kashmithnisakya/Individual-Project.git"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block mt-1 text-lg leading-tight font-medium hover:underline"
+                href="#"
+                className="block mt-1 text-lg leading-tight font-medium"
               >
-                Radio telescope with dual axis solar tracker and battery charge controller
+                Tobu - Social Media Application
               </a>
               <ul className="mt-3 space-y-4 list-disc list-inside text-gray-400">
                 <li className="leading-relaxed">
-                  The telescope could map the satellites(Using Satellite Finder Circuit). 
+                  <span className="font-semibold">Developed the backend</span> for a social media app integrated with large language models (LLMs) to enhance user interaction and content recommendation.
                 </li>
                 <li className="leading-relaxed">
-                  Dual Axis Solar was used to track the sunlight(To Increase the efficiency). 
+                  Implemented features for <span className="font-semibold">user images and conversation analysis</span> using machine learning techniques.
                 </li>
                 <li className="leading-relaxed">
-                  Used PID Controller to control the current by changing the duty cycle. 
-                </li>
-                <li className="leading-relaxed">
-                  Used Battery charger Circuit to increase the battery life.
+                  Worked with LLMs to automate content creation and leveraged <span className="font-semibold">PySpark</span> to build data pipelines for user data analysis and feature optimization.
                 </li>
               </ul>
 
@@ -72,28 +67,101 @@ const Projects = () => {
           <div className="bg-card text-white rounded-xl shadow-lg hover:shadow-2xl hover:scale-105 transition duration-300">
             <div className="p-6">
               <div className="uppercase tracking-wide text-sm text-accent font-semibold">
-              Third Semester Engineering Design Group Project
+              Industry Project
               </div>
               <a
-                href="https://www.youtube.com/watch?v=iB-OG7TEEDw&list=PLUAqWCx1agmOhwzTqfo-OlksiCE60cchw&index=7"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block mt-1 text-lg leading-tight font-medium hover:underline"
+                href="#"
+                className="block mt-1 text-lg leading-tight font-medium"
               >
-                Domestics Covid Test-Kit to measure SPO2, Heart rate, Body temperature and ECG analyzer
+                Energy Consumption Prediction System
               </a>
               <ul className="mt-3 space-y-4 list-disc list-inside text-gray-400">
                 <li className="leading-relaxed">
-                Measure SPO2, Heart rate, Temperature and ECG data and Store them
+                  <span className="font-semibold">Designed and deployed</span> an end-to-end energy forecasting pipeline using MLflow for experiment tracking, Apache Airflow for automated data workflows.
                 </li>
                 <li className="leading-relaxed">
-                Upload user data to the web Server. 
+                  Built production-ready API services using <span className="font-semibold">FastAPI and Docker</span> for real-time energy prediction and dashboard visualization.
                 </li>
                 <li className="leading-relaxed">
-                Remove noise and analyze the user data using MATLAB. 
+                  Built an interactive <span className="font-semibold">Streamlit dashboard</span> to visualize historical consumption, forecasted trends, and key model performance metrics.
+                </li>
+              </ul>
+
+            </div>
+          </div>
+
+          <div className="bg-card text-white rounded-xl shadow-lg hover:shadow-2xl hover:scale-105 transition duration-300">
+            <div className="p-6">
+              <div className="uppercase tracking-wide text-sm text-accent font-semibold">
+              Industry Project
+              </div>
+              <a
+                href="#"
+                className="block mt-1 text-lg leading-tight font-medium"
+              >
+                CashTrack - Smart Expense Tracking Application
+              </a>
+              <ul className="mt-3 space-y-4 list-disc list-inside text-gray-400">
+                <li className="leading-relaxed">
+                  Developed a smart expense tracking application with beautiful <span className="font-semibold">analytics and insights</span> using a modern React frontend with TypeScript, Tailwind CSS, and shadcn-ui components.
                 </li>
                 <li className="leading-relaxed">
-                Push those data to a mobile app and show the predictions. 
+                  Built a powerful <span className="font-semibold">Jaseci backend</span> with RESTful API architecture for data management and business logic implementation.
+                </li>
+                <li className="leading-relaxed">
+                  Implemented comprehensive features including expense/income tracking, <span className="font-semibold">data visualization</span> with Victory charts, user profile management, and category-based organization.
+                </li>
+              </ul>
+
+            </div>
+          </div>
+
+          <div className="bg-card text-white rounded-xl shadow-lg hover:shadow-2xl hover:scale-105 transition duration-300">
+            <div className="p-6">
+              <div className="uppercase tracking-wide text-sm text-accent font-semibold">
+              Industry Project
+              </div>
+              <a
+                href="#"
+                className="block mt-1 text-lg leading-tight font-medium"
+              >
+                Deep Research Assistant - Agentic AI Application
+              </a>
+              <ul className="mt-3 space-y-4 list-disc list-inside text-gray-400">
+                <li className="leading-relaxed">
+                  Built a <span className="font-semibold">production-grade agentic application</span> for answering analytical questions using LangGraph for multi-step reasoning and workflow orchestration.
+                </li>
+                <li className="leading-relaxed">
+                  Integrated web search and document retrieval capabilities with <span className="font-semibold">Chroma vector database</span> for efficient vector search and information retrieval.
+                </li>
+                <li className="leading-relaxed">
+                  Developed user-friendly <span className="font-semibold">Streamlit interface</span> with comprehensive Docker containerization for easy deployment and horizontal scaling.
+                </li>
+              </ul>
+
+            </div>
+          </div>
+
+          <div className="bg-card text-white rounded-xl shadow-lg hover:shadow-2xl hover:scale-105 transition duration-300">
+            <div className="p-6">
+              <div className="uppercase tracking-wide text-sm text-accent font-semibold">
+              Industry Project
+              </div>
+              <a
+                href="#"
+                className="block mt-1 text-lg leading-tight font-medium"
+              >
+                FriendZone - AI-Powered Memory Sharing Platform
+              </a>
+              <ul className="mt-3 space-y-4 list-disc list-inside text-gray-400">
+                <li className="leading-relaxed">
+                  Developed a <span className="font-semibold">full-stack AI-powered platform</span> that allows users to capture, organize, and share memories through intelligent conversational interfaces.
+                </li>
+                <li className="leading-relaxed">
+                  Implemented automatic image analysis using <span className="font-semibold">OpenAI API</span> to extract contextual information (who, what, where, when) from uploaded photos.
+                </li>
+                <li className="leading-relaxed">
+                  Built backend using <span className="font-semibold">jaclang and jac-cloud framework</span> with comprehensive authentication, memory management, and social networking features.
                 </li>
               </ul>
 
