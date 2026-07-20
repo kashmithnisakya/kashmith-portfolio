@@ -17,13 +17,13 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const title = `${profile.name} — Software Engineer · AI/ML`;
+const title = `${profile.name} | Software Engineer · AI/ML`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(profile.siteUrl),
   title: {
     default: title,
-    template: `%s — ${profile.name}`,
+    template: `%s | ${profile.name}`,
   },
   description: profile.bio,
   keywords: [

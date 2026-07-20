@@ -164,7 +164,7 @@ async function fetchAllTimeCommits(years: number[]): Promise<number> {
 
 export async function getGitHubStats(): Promise<GitHubStats> {
   if (!process.env.GITHUB_TOKEN) {
-    console.warn("[github] GITHUB_TOKEN not set — using fallback stats");
+    console.warn("[github] GITHUB_TOKEN not set, using fallback stats");
     return fallbackStats;
   }
 
@@ -200,7 +200,7 @@ export async function getGitHubStats(): Promise<GitHubStats> {
       isLive: true,
     };
   } catch (error) {
-    console.warn("[github] stats fetch failed — using fallback:", error);
+    console.warn("[github] stats fetch failed, using fallback:", error);
     return fallbackStats;
   }
 }

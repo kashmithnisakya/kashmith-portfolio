@@ -25,7 +25,7 @@ export function Contact() {
           </h2>
           <p className="mx-auto mt-6 max-w-xl text-base text-muted-foreground">
             Open to AI/ML engineering roles, freelance projects, and research
-            collaborations. The fastest way to reach me is email — I usually
+            collaborations. The fastest way to reach me is email. I usually
             reply within a day.
           </p>
         </BlurFade>

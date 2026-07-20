@@ -48,7 +48,7 @@
 }
 
 :root {
-  /* Dark-only theme — zinc-950 base, emerald accent */
+  /* Dark-only theme: zinc-950 base, emerald accent */
   --background: oklch(0.145 0.002 285);
   --foreground: oklch(0.965 0.001 286);
   --card: oklch(0.185 0.004 285);

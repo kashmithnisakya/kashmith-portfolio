@@ -2,7 +2,7 @@ import { cn } from "@/lib/utils";
 
 /**
  * Ambient radial glow used behind hero/section content.
- * Purely decorative — server-renderable, no JS.
+ * Purely decorative; server-renderable, no JS.
  */
 export function Spotlight({ className }: { className?: string }) {
   return (

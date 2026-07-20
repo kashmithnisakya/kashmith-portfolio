@@ -1,6 +1,6 @@
 # kashmith.com
 
-Personal portfolio of **Kashmith Samaranayaka** — Software Engineer · AI/ML.
+Personal portfolio of **Kashmith Samaranayaka**, Software Engineer · AI/ML.
 
 **Live:** [kashmith.com](https://kashmith.com)
 
@@ -34,6 +34,6 @@ npm run typecheck  # tsc --noEmit
 
 ## Content
 
-All portfolio content lives in typed data files under [`src/data/`](src/data) —
+All portfolio content lives in typed data files under [`src/data/`](src/data):
 profile, experience, projects, publications, skills, certifications. Edit those
 files to update the site; no component changes needed.

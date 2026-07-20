@@ -5,7 +5,7 @@ export const projects: Project[] = [
     title: "JacHammer",
     tagline: "AI agentic software-generation platform",
     description:
-      "Backend developer on an agentic AI platform that generates and deploys full-stack jaclang applications end-to-end — orchestrating LLM-driven code generation, build, and one-click deployment.",
+      "Backend developer on an agentic AI platform that generates and deploys full-stack jaclang applications end-to-end, orchestrating LLM-driven code generation, build, and one-click deployment.",
     tech: ["Python", "Jac", "LLM Agents", "Kubernetes"],
     size: "large",
     highlight: "End-to-end app generation",
@@ -15,7 +15,7 @@ export const projects: Project[] = [
     title: "Tobu Lite",
     tagline: "AI image-to-video generation",
     description:
-      "Built the image-to-video feature for the Tobu platform — a generative media pipeline integrating Google's Veo 3 model that lets users create videos from their photos using selectable templates.",
+      "Built the image-to-video feature for the Tobu platform: a generative media pipeline integrating Google's Veo 3 model that lets users create videos from their photos using selectable templates.",
     tech: ["Python", "Google Veo 3", "GenAI"],
     size: "small",
     highlight: "Google Veo 3",
@@ -25,7 +25,7 @@ export const projects: Project[] = [
     title: "Deep Research Assistant",
     tagline: "Agentic AI research application",
     description:
-      "Production-grade agentic app for analytical question answering — LangGraph multi-step reasoning, web search and Chroma vector retrieval, deployed via Docker with a Streamlit interface.",
+      "Production-grade agentic app for analytical question answering. Uses LangGraph multi-step reasoning with web search and Chroma vector retrieval, deployed via Docker with a Streamlit interface.",
     tech: ["LangGraph", "Chroma", "Docker", "Streamlit"],
     github: "https://github.com/kashmithnisakya/Deep-Research-Assistan",
     size: "small",
@@ -44,7 +44,7 @@ export const projects: Project[] = [
     title: "FriendZone",
     tagline: "AI-powered memory sharing platform",
     description:
-      "Full-stack AI platform to capture, organize, and share memories via conversational interfaces — automatic image analysis (who/what/where/when) with the OpenAI API, backend on jaclang and jac-cloud.",
+      "Full-stack AI platform to capture, organize, and share memories via conversational interfaces, with automatic image analysis (who/what/where/when) using the OpenAI API and a backend on jaclang and jac-cloud.",
     tech: ["Jac", "jac-cloud", "OpenAI API"],
     github: "https://github.com/kashmithnisakya/FriendZone",
     size: "small",
@@ -54,7 +54,7 @@ export const projects: Project[] = [
     title: "Self-Adaptive NILM",
     tagline: "Deep learning research → 2 IEEE publications",
     description:
-      "Designed WaveNet/CNN models with ensemble methods for appliance-level power prediction; applied pseudo-labelling and transfer learning for self-adaptation to appliance ageing without retraining — over 97% accuracy on a six-year dataset. Published at IEEE World AI IoT Congress 2024 and in IEEE Access.",
+      "Designed WaveNet/CNN models with ensemble methods for appliance-level power prediction; applied pseudo-labelling and transfer learning for self-adaptation to appliance ageing without retraining, reaching over 97% accuracy on a six-year dataset. Published at IEEE World AI IoT Congress 2024 and in IEEE Access.",
     tech: ["PyTorch", "WaveNet", "Transfer Learning"],
     github: "https://github.com/kashmithnisakya/Self_Adaptive_NILM_Web",
     size: "large",

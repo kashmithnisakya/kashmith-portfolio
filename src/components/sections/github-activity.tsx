@@ -12,7 +12,7 @@ export function GitHubActivity({ stats }: { stats: GitHubStats }) {
       id="github"
       eyebrow="By the numbers"
       title="GitHub activity, live"
-      description="Fetched from the GitHub GraphQL API and revalidated hourly — not hand-typed numbers."
+      description="Fetched from the GitHub GraphQL API and revalidated hourly. These are not hand-typed numbers."
     >
       <BlurFade>
         {stats.isLive && (
