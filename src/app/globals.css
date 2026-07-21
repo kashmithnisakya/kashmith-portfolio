@@ -34,12 +34,12 @@
       transform: translateX(0);
     }
     to {
-      transform: translateX(calc(-50% - 0.75rem));
+      transform: translateX(-50%);
     }
   }
   @keyframes marquee-reverse {
     from {
-      transform: translateX(calc(-50% - 0.75rem));
+      transform: translateX(-50%);
     }
     to {
       transform: translateX(0);

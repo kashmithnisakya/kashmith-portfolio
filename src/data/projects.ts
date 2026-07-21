@@ -54,7 +54,7 @@ export const projects: Project[] = [
     title: "Self-Adaptive NILM",
     tagline: "Deep learning research → 2 IEEE publications",
     description:
-      "Designed WaveNet/CNN models with ensemble methods for appliance-level power prediction; applied pseudo-labelling and transfer learning for self-adaptation to appliance ageing without retraining, reaching over 97% accuracy on a six-year dataset. Published at IEEE World AI IoT Congress 2024 and in IEEE Access.",
+      "Designed WaveNet/CNN models with ensemble methods for appliance-level power prediction; applied pseudo-labeling and transfer learning for self-adaptation to appliance aging without retraining, reaching over 97% accuracy on a six-year dataset. Published at IEEE World AI IoT Congress 2024 and in IEEE Access.",
     tech: ["PyTorch", "WaveNet", "Transfer Learning"],
     github: "https://github.com/kashmithnisakya/Self_Adaptive_NILM_Web",
     size: "large",

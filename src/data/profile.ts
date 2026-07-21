@@ -14,7 +14,7 @@ export const profile: Profile = {
     school: "University of Moratuwa",
     degree: "B.Sc. Engineering (Hons) in Electrical Engineering",
     period: "Jan 2020 – Jul 2024",
-    detail: "Washington Accord–accredited · Dean's List",
+    detail: "Washington Accord-accredited · Dean's List (Semester 2)",
   },
   photo: "/profile.jpg",
   resumeUrl: "/Kashmith_Samaranayaka.pdf",

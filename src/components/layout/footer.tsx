@@ -19,7 +19,7 @@ export function Footer() {
                 target={social.href.startsWith("http") ? "_blank" : undefined}
                 rel="noopener noreferrer"
                 aria-label={social.label}
-                className="rounded-full p-2.5 text-muted-foreground transition-colors hover:bg-secondary/60 hover:text-foreground"
+                className="rounded-full p-2.5 text-muted-foreground transition-colors hover:bg-secondary/60 hover:text-primary"
               >
                 <Icon className="size-4" />
               </a>
@@ -27,7 +27,7 @@ export function Footer() {
           })}
         </div>
 
-        <p className="font-mono text-xs text-muted-foreground/70">
+        <p className="font-mono text-xs text-muted-foreground">
           Built with Next.js · Deployed on Vercel
         </p>
       </div>

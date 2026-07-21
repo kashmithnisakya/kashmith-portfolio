@@ -25,7 +25,10 @@ export function GitHubActivity({ stats }: { stats: GitHubStats }) {
           </p>
         )}
         <StatsTiles stats={stats} publicationCount={publications.length} />
-        <ContributionGraph weeks={stats.weeks} />
+        <ContributionGraph
+          weeks={stats.weeks}
+          total={stats.totalContributions}
+        />
       </BlurFade>
     </Section>
   );

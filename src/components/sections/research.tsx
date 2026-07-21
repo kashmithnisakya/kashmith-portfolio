@@ -1,4 +1,4 @@
-import { BadgeCheck, ExternalLink, Loader2, Trophy } from "lucide-react";
+import { BadgeCheck, Clock, ExternalLink, Trophy } from "lucide-react";
 
 import { Section } from "@/components/layout/section";
 import { Badge } from "@/components/ui/badge";
@@ -53,11 +53,11 @@ export function Research() {
         <h3 className="mt-14 mb-6 font-mono text-xs tracking-[0.2em] text-primary uppercase">
           Certifications
         </h3>
-        <div className="grid gap-3 sm:grid-cols-2">
+        <div className="grid gap-4 sm:grid-cols-2">
           {certifications.map((certification) => (
             <div
               key={certification.title}
-              className="flex items-start justify-between gap-3 rounded-xl border border-border bg-card/60 p-4"
+              className="flex items-start justify-between gap-3 rounded-2xl border border-border bg-card/60 p-4"
             >
               <div>
                 <p className="text-sm font-medium">{certification.title}</p>
@@ -71,7 +71,7 @@ export function Research() {
                 </Badge>
               ) : (
                 <Badge variant="outline" className="shrink-0">
-                  <Loader2 /> In progress
+                  <Clock /> In progress
                 </Badge>
               )}
             </div>
