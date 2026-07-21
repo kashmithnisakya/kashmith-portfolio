@@ -45,10 +45,10 @@ export function Navbar() {
   }, []);
 
   return (
-    <header className="fixed inset-x-0 top-4 z-50 px-4">
+    <header className="pointer-events-none fixed inset-x-0 top-4 z-50 px-4">
       <nav
         aria-label="Main navigation"
-        className="mx-auto flex w-full max-w-3xl items-center justify-between rounded-full border border-border bg-background/70 py-1.5 pr-1.5 pl-4 shadow-lg shadow-black/20 backdrop-blur-xl"
+        className="pointer-events-auto mx-auto flex w-full max-w-3xl items-center justify-between rounded-full border border-border bg-background/70 py-1.5 pr-1.5 pl-4 shadow-lg shadow-black/20 backdrop-blur-xl"
       >
         <a
           href="#home"
@@ -63,6 +63,7 @@ export function Navbar() {
             <a
               key={item.id}
               href={`#${item.id}`}
+              aria-current={active === item.id ? "true" : undefined}
               className={cn(
                 "rounded-full px-3 py-1.5 text-sm transition-colors",
                 active === item.id
@@ -103,6 +104,7 @@ export function Navbar() {
                     key={item.id}
                     href={`#${item.id}`}
                     onClick={() => setOpen(false)}
+                    aria-current={active === item.id ? "true" : undefined}
                     className={cn(
                       "rounded-lg px-3 py-2.5 text-base transition-colors",
                       active === item.id

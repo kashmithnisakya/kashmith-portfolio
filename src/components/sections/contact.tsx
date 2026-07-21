@@ -16,7 +16,7 @@ export function Contact() {
       <Spotlight className="top-auto -bottom-72 opacity-15" />
       <Section id="contact" className="relative py-28 text-center sm:py-36">
         <BlurFade>
-          <p className="mb-4 font-mono text-xs tracking-[0.2em] text-primary uppercase">
+          <p className="mb-3 font-mono text-xs tracking-[0.2em] text-primary uppercase">
             What&apos;s next
           </p>
           <h2 className="mx-auto max-w-3xl text-4xl font-semibold tracking-tight sm:text-6xl">

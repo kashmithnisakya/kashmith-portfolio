@@ -21,6 +21,6 @@ export const publications: Publication[] = [
       "W. A. Yasodya, S. M. L. Arampola, M. S. K. Nisakya, V. Logeeshan, S. Kumarawadu, C. Wanigasekara",
     href: "https://ieeexplore.ieee.org/document/11044358",
     summary:
-      "Journal extension of the self-adaptive NILM framework, with synthetic data generation and advanced neural architectures achieving exceptional disaggregation accuracy on ageing appliances.",
+      "Journal extension of the self-adaptive NILM framework, with synthetic data generation and advanced neural architectures achieving high disaggregation accuracy on aging appliances.",
   },
 ];

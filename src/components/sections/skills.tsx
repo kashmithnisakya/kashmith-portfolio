@@ -25,12 +25,12 @@ export function Skills() {
     >
       <BlurFade>
         <div className="space-y-4">
-          <Marquee duration="45s">
+          <Marquee duration="45s" label="Skills list, first row">
             {firstRow.map((skill) => (
               <SkillPill key={skill} label={skill} />
             ))}
           </Marquee>
-          <Marquee reverse duration="45s">
+          <Marquee reverse duration="45s" label="Skills list, second row">
             {secondRow.map((skill) => (
               <SkillPill key={skill} label={skill} />
             ))}

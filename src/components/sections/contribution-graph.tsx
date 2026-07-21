@@ -2,7 +2,7 @@ import { cn } from "@/lib/utils";
 import type { ContributionWeek } from "@/lib/github";
 
 const LEVEL_CLASSES = [
-  "bg-white/[0.06]",
+  "bg-foreground/[0.06]",
   "bg-primary/25",
   "bg-primary/45",
   "bg-primary/70",
@@ -11,14 +11,18 @@ const LEVEL_CLASSES = [
 
 export function ContributionGraph({
   weeks,
+  total,
 }: {
   weeks: ContributionWeek[] | null;
+  total?: number;
 }) {
   if (!weeks) return null;
 
   return (
     <div className="mt-4 rounded-2xl border border-border bg-card/60 p-5">
-      <div className="overflow-x-auto pb-1">
+      {/* The grid is decorative for AT: the total is announced in text and
+          in the stats tiles, and per-day counts remain as hover titles. */}
+      <div aria-hidden="true" className="overflow-x-auto pb-1">
         <div className="flex w-full min-w-[640px] gap-[3px]">
           {weeks.map((week, weekIndex) => (
             <div key={weekIndex} className="flex flex-1 flex-col gap-[3px]">
@@ -40,6 +44,11 @@ export function ContributionGraph({
       <div className="mt-3 flex items-center justify-between">
         <p className="font-mono text-xs text-muted-foreground">
           Last 12 months of GitHub contributions
+          {typeof total === "number" && (
+            <span className="sr-only">
+              : {Intl.NumberFormat("en-US").format(total)} total
+            </span>
+          )}
         </p>
         <div className="flex items-center gap-1.5" aria-hidden="true">
           <span className="font-mono text-xs text-muted-foreground">Less</span>
