@@ -35,5 +35,5 @@ npm run typecheck  # tsc --noEmit
 ## Content
 
 All portfolio content lives in typed data files under [`src/data/`](src/data):
-profile, experience, projects, publications, skills, certifications. Edit those
+profile, experience, projects, publications, skills, articles. Edit those
 files to update the site; no component changes needed.

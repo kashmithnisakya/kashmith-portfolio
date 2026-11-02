@@ -50,7 +50,7 @@ export function Section({
                   aria-hidden="true"
                   className="absolute inset-x-0 h-px bg-border"
                 />
-                <p className="relative -rotate-3 rounded-full bg-card px-4 py-1.5 text-xs font-medium shadow-sm ring-1 ring-border">
+                <p className="relative rounded-full bg-card px-4 py-1.5 text-xs font-medium shadow-sm ring-1 ring-border">
                   {eyebrow}
                 </p>
               </div>

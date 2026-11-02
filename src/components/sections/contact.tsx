@@ -11,9 +11,9 @@ export function Contact() {
   const upwork = profile.socials.find((s) => s.label === "Upwork");
 
   return (
-    <Section id="contact" className="py-24 text-center sm:py-32">
+    <Section id="contact" tone="raised" className="py-24 text-center sm:py-32">
       <BlurFade>
-        <div className="mx-auto flex size-16 items-center justify-center rounded-full bg-panel ring-1 ring-border">
+        <div className="mx-auto flex size-16 items-center justify-center rounded-full bg-card ring-1 ring-border">
           <Handshake aria-hidden="true" className="size-7" strokeWidth={1.5} />
         </div>
         <h2 className="text-gradient mx-auto mt-6 w-fit max-w-3xl pb-1 text-4xl font-semibold tracking-tight text-balance sm:text-5xl">
