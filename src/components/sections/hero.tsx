@@ -68,7 +68,7 @@ export function Hero() {
 
         <BlurFade delay={0.2}>
           <p className="mx-auto mt-6 max-w-2xl text-sm leading-relaxed text-pretty text-muted-foreground sm:text-base">
-            {profile.bio}
+            {profile.intro}
           </p>
         </BlurFade>
 

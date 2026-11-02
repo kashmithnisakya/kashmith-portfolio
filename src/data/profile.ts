@@ -6,6 +6,7 @@ export const profile: Profile = {
   role: "Software Engineer · AI/ML",
   eyebrow: "AI/ML Engineer @ Jaseci Lab",
   headline: "I build production AI systems, from LLM agents to the infrastructure they run on.",
+  intro: "I work across AI, backend engineering, and infrastructure: shipping production systems, contributing to open source, and building products from the ground up.",
   bio: "Software Engineer with 2.5+ years building production AI/ML and backend systems in Python, Jac, and Go: LLM-powered agentic applications, MLOps pipelines, and scalable infrastructure. Shipped AI products used by real customers, including live apps on Google Play and the App Store. Open-source core contributor to the Jaseci stack and co-author of two IEEE-published papers on deep learning.",
   location: "Sri Lanka",
   email: "kashmithnisakya@gmail.com",

@@ -11,6 +11,7 @@ export interface Profile {
   role: string;
   eyebrow: string;
   headline: string;
+  intro: string;
   bio: string;
   location: string;
   email: string;
