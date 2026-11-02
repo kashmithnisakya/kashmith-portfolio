@@ -5,6 +5,7 @@ import { Hero } from "@/components/sections/hero";
 import { Projects } from "@/components/sections/projects";
 import { Research } from "@/components/sections/research";
 import { Skills } from "@/components/sections/skills";
+import { WorkStrip } from "@/components/sections/work-strip";
 import { getGitHubStats } from "@/lib/github";
 
 export const revalidate = 3600;
@@ -15,6 +16,7 @@ export default async function Home() {
   return (
     <>
       <Hero />
+      <WorkStrip />
       <GitHubActivity stats={stats} />
       <Projects />
       <Experience />

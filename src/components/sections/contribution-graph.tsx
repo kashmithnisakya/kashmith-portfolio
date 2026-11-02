@@ -19,7 +19,7 @@ export function ContributionGraph({
   if (!weeks) return null;
 
   return (
-    <div className="mt-4 rounded-2xl border border-border bg-card/60 p-5">
+    <div className="mt-4 rounded-2xl border border-border bg-card p-5">
       {/* The grid is decorative for AT: the total is announced in text and
           in the stats tiles, and per-day counts remain as hover titles. */}
       <div aria-hidden="true" className="overflow-x-auto pb-1">

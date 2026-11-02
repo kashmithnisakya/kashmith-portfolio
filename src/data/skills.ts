@@ -48,6 +48,3 @@ export const skillGroups: SkillGroup[] = [
     ],
   },
 ];
-
-/** Flattened for the marquee rows. */
-export const allSkills = skillGroups.flatMap((g) => g.items);

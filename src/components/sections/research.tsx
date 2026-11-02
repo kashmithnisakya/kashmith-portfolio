@@ -3,7 +3,7 @@ import { BadgeCheck, Clock, ExternalLink, Trophy } from "lucide-react";
 import { Section } from "@/components/layout/section";
 import { Badge } from "@/components/ui/badge";
 import { BlurFade } from "@/components/ui/blur-fade";
-import { GlowCard } from "@/components/ui/glow-card";
+import { Card } from "@/components/ui/card";
 import { certifications } from "@/data/certifications";
 import { publications } from "@/data/publications";
 
@@ -11,6 +11,7 @@ export function Research() {
   return (
     <Section
       id="research"
+      tone="raised"
       eyebrow="Research & credentials"
       title="Publications"
       description="Peer-reviewed work on self-adaptive deep learning for non-intrusive load monitoring."
@@ -18,7 +19,7 @@ export function Research() {
       <div className="grid gap-5 md:grid-cols-2">
         {publications.map((publication, index) => (
           <BlurFade key={publication.title} delay={index * 0.08}>
-            <GlowCard className="h-full">
+            <Card className="h-full">
               <div className="flex h-full flex-col p-6">
                 <p className="font-mono text-xs tracking-[0.15em] text-primary uppercase">
                   {publication.venue} · {publication.year}
@@ -44,20 +45,20 @@ export function Research() {
                   </Badge>
                 )}
               </div>
-            </GlowCard>
+            </Card>
           </BlurFade>
         ))}
       </div>
 
       <BlurFade delay={0.15}>
-        <h3 className="mt-14 mb-6 font-mono text-xs tracking-[0.2em] text-primary uppercase">
+        <h3 className="mt-14 mb-6 text-center font-mono text-xs tracking-[0.2em] text-muted-foreground uppercase">
           Certifications
         </h3>
         <div className="grid gap-4 sm:grid-cols-2">
           {certifications.map((certification) => (
             <div
               key={certification.title}
-              className="flex items-start justify-between gap-3 rounded-2xl border border-border bg-card/60 p-4"
+              className="flex items-start justify-between gap-3 rounded-2xl border border-border bg-card p-4"
             >
               <div>
                 <p className="text-sm font-medium">{certification.title}</p>

@@ -4,7 +4,7 @@ import { GitHubIcon } from "@/components/icons";
 import { Section } from "@/components/layout/section";
 import { Badge } from "@/components/ui/badge";
 import { BlurFade } from "@/components/ui/blur-fade";
-import { GlowCard } from "@/components/ui/glow-card";
+import { Card } from "@/components/ui/card";
 import { projects } from "@/data/projects";
 import { cn } from "@/lib/utils";
 
@@ -23,7 +23,7 @@ export function Projects() {
             delay={index * 0.06}
             className={cn(project.size === "large" && "md:col-span-2")}
           >
-            <GlowCard className="h-full">
+            <Card className="h-full">
               <div className="flex h-full flex-col p-6">
                 <div className="flex items-start justify-between gap-3">
                   <p className="font-mono text-xs tracking-[0.15em] text-primary uppercase">
@@ -78,7 +78,7 @@ export function Projects() {
                   ))}
                 </div>
               </div>
-            </GlowCard>
+            </Card>
           </BlurFade>
         ))}
       </div>

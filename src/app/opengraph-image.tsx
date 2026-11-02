@@ -30,7 +30,7 @@ export default function OpenGraphImage() {
             height: 600,
             borderRadius: 9999,
             background:
-              "radial-gradient(circle, rgba(52,211,153,0.25), rgba(52,211,153,0.05) 55%, transparent 75%)",
+              "radial-gradient(circle, rgba(255,255,255,0.14), rgba(255,255,255,0.05) 55%, transparent 75%)",
             display: "flex",
           }}
         />
@@ -39,7 +39,7 @@ export default function OpenGraphImage() {
             display: "flex",
             alignItems: "center",
             gap: 12,
-            color: "#34d399",
+            color: "#fafafa",
             fontSize: 28,
             fontWeight: 600,
           }}
@@ -49,7 +49,7 @@ export default function OpenGraphImage() {
               width: 14,
               height: 14,
               borderRadius: 9999,
-              background: "#34d399",
+              background: "#fafafa",
               display: "flex",
             }}
           />
@@ -88,7 +88,7 @@ export default function OpenGraphImage() {
           }}
         >
           <div style={{ display: "flex" }}>kashmith.com</div>
-          <div style={{ display: "flex", color: "#34d399" }}>
+          <div style={{ display: "flex", color: "#fafafa" }}>
             github.com/kashmithnisakya
           </div>
         </div>

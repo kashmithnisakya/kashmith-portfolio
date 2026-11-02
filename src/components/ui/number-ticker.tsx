@@ -10,7 +10,11 @@ import {
 
 import { cn } from "@/lib/utils";
 
-const format = (value: number) => Intl.NumberFormat("en-US").format(value);
+const format = (value: number, digits: number) =>
+  Intl.NumberFormat("en-US", {
+    minimumFractionDigits: digits,
+    maximumFractionDigits: digits,
+  }).format(value);
 
 interface NumberTickerProps {
   value: number;
@@ -33,6 +37,7 @@ export function NumberTicker({
   const spring = useSpring(motionValue, { damping: 45, stiffness: 120 });
   const inView = useInView(ref, { once: true, margin: "-40px" });
   const reducedMotion = useReducedMotion();
+  const digits = Number.isInteger(value) ? 0 : 1;
 
   useEffect(() => {
     if (reducedMotion || !ref.current) return;
@@ -48,15 +53,15 @@ export function NumberTicker({
     () =>
       spring.on("change", (latest: number) => {
         if (ref.current) {
-          ref.current.textContent = format(Math.round(latest));
+          ref.current.textContent = format(latest, digits);
         }
       }),
-    [spring],
+    [spring, digits],
   );
 
   return (
     <span ref={ref} className={cn("tabular-nums tracking-tight", className)}>
-      {format(value)}
+      {format(value, digits)}
     </span>
   );
 }
