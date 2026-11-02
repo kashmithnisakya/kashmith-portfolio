@@ -47,7 +47,7 @@ export function ProjectCard({ project }: { project: Project }) {
         </p>
 
         {project.highlight && (
-          <Badge variant="accent" className="mt-4">
+          <Badge variant="accent" className="mt-4 whitespace-normal">
             {project.highlight}
           </Badge>
         )}

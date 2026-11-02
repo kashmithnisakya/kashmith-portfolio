@@ -2,6 +2,17 @@ import type { Project } from "@/types";
 
 export const projects: Project[] = [
   {
+    title: "Tobu",
+    tagline: "AI-powered personal memory platform, live on Google Play",
+    description:
+      "Developed and maintained the backend infrastructure, with integrated LLMs, and took the system to production fast enough to support the company's $1.5M raise. Shipped ML features for image analysis and conversation processing that turn unstructured photos and chats into structured, searchable information, and built PySpark pipelines for user analysis and feature optimization.",
+    tech: ["Python", "LLMs", "PySpark"],
+    href: "https://play.google.com/store/apps/details?id=life.tobu",
+    size: "full",
+    highlight: "1,000+ users · $1.5M raise",
+    category: "Industry · Jaseci Lab",
+  },
+  {
     title: "Jaseci Stack",
     featured: true,
     tagline: "Open-source core contributor (jac-scale, jaclang)",

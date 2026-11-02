@@ -46,7 +46,7 @@ export interface Project {
   tech: string[];
   github?: string;
   href?: string;
-  size: "large" | "small";
+  size: "full" | "large" | "small";
   highlight?: string;
   category: string;
   featured?: boolean;
