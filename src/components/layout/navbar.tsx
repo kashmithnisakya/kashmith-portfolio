@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { FileDown, MenuIcon } from "lucide-react";
 
+import { ThemeToggle } from "@/components/theme-toggle";
 import { Button } from "@/components/ui/button";
 import {
   Sheet,
@@ -25,16 +26,27 @@ const NAV_ITEMS = [
 export function Navbar() {
   const [active, setActive] = useState<string | null>(null);
   const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  // The hero has its own top bar, so the pill slides in once that scrolls away.
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 120);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   useEffect(() => {
-    const sections = NAV_ITEMS.map((item) =>
-      document.getElementById(item.id),
-    ).filter((el): el is HTMLElement => el !== null);
+    const sections = ["home", ...NAV_ITEMS.map((item) => item.id)]
+      .map((id) => document.getElementById(id))
+      .filter((el): el is HTMLElement => el !== null);
 
     const observer = new IntersectionObserver(
       (entries) => {
         for (const entry of entries) {
-          if (entry.isIntersecting) setActive(entry.target.id);
+          if (entry.isIntersecting) {
+            setActive(entry.target.id === "home" ? null : entry.target.id);
+          }
         }
       },
       { rootMargin: "-35% 0px -60% 0px" },
@@ -48,14 +60,19 @@ export function Navbar() {
     <header className="pointer-events-none fixed inset-x-0 top-4 z-50 px-4">
       <nav
         aria-label="Main navigation"
-        className="pointer-events-auto mx-auto flex w-full max-w-3xl items-center justify-between rounded-full border border-border bg-background/70 py-1.5 pr-1.5 pl-4 shadow-lg shadow-black/20 backdrop-blur-xl"
+        className={cn(
+          "mx-auto flex w-full max-w-3xl items-center justify-between rounded-full border border-border bg-background/80 py-1.5 pr-1.5 pl-4 shadow-lg shadow-black/10 backdrop-blur-xl transition-[opacity,translate] duration-300",
+          scrolled || open
+            ? "pointer-events-auto translate-y-0 opacity-100"
+            : "-translate-y-4 opacity-0 focus-within:pointer-events-auto focus-within:translate-y-0 focus-within:opacity-100",
+        )}
       >
         <a
           href="#home"
           className="font-mono text-sm font-semibold tracking-tight"
           onClick={() => setActive(null)}
         >
-          kashmith<span className="text-primary">.</span>com
+          kashmith.com
         </a>
 
         <div className="hidden items-center gap-0.5 md:flex">
@@ -77,6 +94,7 @@ export function Navbar() {
         </div>
 
         <div className="flex items-center gap-1.5">
+          <ThemeToggle />
           <Button asChild size="sm" className="hidden md:inline-flex">
             <a href={profile.resumeUrl} download>
               Resume <FileDown />
@@ -96,7 +114,7 @@ export function Navbar() {
             </SheetTrigger>
             <SheetContent side="right" className="p-6">
               <SheetTitle className="font-mono text-sm">
-                kashmith<span className="text-primary">.</span>com
+                kashmith.com
               </SheetTitle>
               <div className="mt-4 flex flex-col gap-1">
                 {NAV_ITEMS.map((item) => (

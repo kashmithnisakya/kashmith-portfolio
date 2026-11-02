@@ -11,15 +11,16 @@ export function GitHubActivity({ stats }: { stats: GitHubStats }) {
     <Section
       id="github"
       eyebrow="By the numbers"
+      tone="raised"
       title="GitHub activity, live"
       description="Fetched from the GitHub GraphQL API and revalidated hourly. These are not hand-typed numbers."
     >
       <BlurFade>
         {stats.isLive && (
-          <p className="mb-4 flex items-center gap-2 font-mono text-xs text-muted-foreground">
+          <p className="mb-4 flex items-center justify-center gap-2 font-mono text-xs text-muted-foreground">
             <span className="relative flex size-2">
-              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary opacity-60" />
-              <span className="relative inline-flex size-2 rounded-full bg-primary" />
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-signal opacity-60" />
+              <span className="relative inline-flex size-2 rounded-full bg-signal" />
             </span>
             Live from the GitHub API
           </p>

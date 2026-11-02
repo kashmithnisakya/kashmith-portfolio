@@ -3,7 +3,7 @@ import { GraduationCap } from "lucide-react";
 import { Section } from "@/components/layout/section";
 import { Badge } from "@/components/ui/badge";
 import { BlurFade } from "@/components/ui/blur-fade";
-import { GlowCard } from "@/components/ui/glow-card";
+import { Card } from "@/components/ui/card";
 import { experience } from "@/data/experience";
 import { profile } from "@/data/profile";
 import { cn } from "@/lib/utils";
@@ -12,10 +12,11 @@ export function Experience() {
   return (
     <Section
       id="experience"
+      tone="raised"
       eyebrow="Where I've worked"
       title="Experience"
     >
-      <ol className="relative ml-3 space-y-12 border-l border-border">
+      <ol className="relative mx-auto ml-3 max-w-3xl space-y-12 border-l border-border md:ml-auto">
         {experience.map((job, index) => (
           <li key={`${job.company}-${job.role}`} className="relative pl-8">
             <span
@@ -23,8 +24,8 @@ export function Experience() {
               className={cn(
                 "absolute top-1.5 -left-[7px] size-3.5 rounded-full border-2",
                 index === 0
-                  ? "border-primary bg-primary shadow-[0_0_12px_0_var(--primary)]"
-                  : "border-border bg-background",
+                  ? "border-primary bg-primary"
+                  : "border-border bg-panel",
               )}
             />
             <BlurFade delay={index * 0.08}>
@@ -67,11 +68,11 @@ export function Experience() {
       </ol>
 
       <BlurFade delay={0.2}>
-        <div className="mt-14">
-          <h3 className="mb-4 font-mono text-xs tracking-[0.2em] text-primary uppercase">
+        <div className="mx-auto mt-14 max-w-3xl">
+          <h3 className="mb-4 font-mono text-xs tracking-[0.2em] text-muted-foreground uppercase">
             Education
           </h3>
-          <GlowCard>
+          <Card>
             <div className="flex items-start gap-4 p-6">
               <div className="rounded-xl border border-primary/25 bg-primary/10 p-2.5 text-primary">
                 <GraduationCap className="size-5" />
@@ -86,7 +87,7 @@ export function Experience() {
                 </p>
               </div>
             </div>
-          </GlowCard>
+          </Card>
         </div>
       </BlurFade>
     </Section>

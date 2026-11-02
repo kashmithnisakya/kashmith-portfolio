@@ -59,6 +59,9 @@ export const metadata: Metadata = {
   },
 };
 
+// Runs before first paint so a saved dark choice never flashes light.
+const themeScript = `(function(){var t=null;try{t=localStorage.getItem("theme")}catch(e){}if(t!=="light"&&t!=="dark")t=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";document.documentElement.classList.toggle("dark",t==="dark")})()`;
+
 const personJsonLd = {
   "@context": "https://schema.org",
   "@type": "Person",
@@ -87,13 +90,20 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark">
+    <html lang="en" suppressHydrationWarning>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: themeScript }} />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} font-sans antialiased`}
       >
         <Navbar />
-        <main>{children}</main>
-        <Footer />
+        <div className="mx-auto w-full max-w-[88rem] p-2 sm:p-4">
+          <div className="grain overflow-clip rounded-panel bg-background">
+            <main>{children}</main>
+            <Footer />
+          </div>
+        </div>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}

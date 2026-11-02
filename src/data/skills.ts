@@ -3,7 +3,7 @@ import type { SkillGroup } from "@/types";
 export const skillGroups: SkillGroup[] = [
   {
     category: "Languages",
-    items: ["Python", "Go", "Jac (jaclang)", "SQL", "Bash", "TypeScript"],
+    items: ["Python", "Go", "TypeScript", "Jac (jaclang)", "SQL", "Bash"],
   },
   {
     category: "AI & GenAI",
@@ -15,6 +15,7 @@ export const skillGroups: SkillGroup[] = [
       "Fine-tuning (Unsloth)",
       "NLP",
       "Deep Learning",
+      "Veo 3",
     ],
   },
   {
@@ -23,21 +24,27 @@ export const skillGroups: SkillGroup[] = [
   },
   {
     category: "MLOps & Infra",
-    items: ["Docker", "Kubernetes", "MLflow", "Apache Airflow", "CI/CD"],
+    items: [
+      "Docker",
+      "Kubernetes",
+      "MLflow",
+      "Apache Airflow",
+      "CI/CD (GitHub Actions)",
+      "Google Cloud",
+      "AWS",
+    ],
   },
   {
     category: "Backend & Data",
     items: [
       "FastAPI",
       "Jaseci",
-      "REST APIs",
+      "PostgreSQL",
       "PySpark",
       "Kafka",
       "Redis Streams",
+      "WebSockets",
       "Chroma",
     ],
   },
 ];
-
-/** Flattened for the marquee rows. */
-export const allSkills = skillGroups.flatMap((g) => g.items);
