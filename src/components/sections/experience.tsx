@@ -11,10 +11,13 @@ import { cn } from "@/lib/utils";
 export function Experience() {
   return (
     <Section
-      id="experience"
+      id="about"
       tone="raised"
-      eyebrow="Where I've worked"
-      title="Experience"
+      titleAs="h1"
+      title="About"
+      description={profile.bio}
+      eyebrow="Experience"
+      className="pt-28 sm:pt-32"
     >
       <ol className="relative mx-auto ml-3 max-w-3xl space-y-12 border-l border-border md:ml-auto">
         {experience.map((job, index) => (

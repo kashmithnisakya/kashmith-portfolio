@@ -5,6 +5,7 @@ import "./globals.css";
 
 import { Footer } from "@/components/layout/footer";
 import { Navbar } from "@/components/layout/navbar";
+import { Contact } from "@/components/sections/contact";
 import { profile } from "@/data/profile";
 
 const geistSans = Geist({
@@ -90,7 +91,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" data-scroll-behavior="smooth" suppressHydrationWarning>
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
       </head>
@@ -101,6 +102,7 @@ export default function RootLayout({
         <div className="mx-auto w-full max-w-[88rem] p-2 sm:p-4">
           <div className="grain overflow-clip rounded-panel bg-background">
             <main>{children}</main>
+            <Contact />
             <Footer />
           </div>
         </div>

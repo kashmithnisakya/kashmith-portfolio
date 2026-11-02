@@ -8,6 +8,7 @@ interface SectionProps {
   title?: string;
   description?: string;
   tone?: "raised" | "flat";
+  titleAs?: "h1" | "h2";
   children: ReactNode;
   className?: string;
 }
@@ -18,6 +19,7 @@ export function Section({
   title,
   description,
   tone = "flat",
+  titleAs: Title = "h2",
   children,
   className,
 }: SectionProps) {
@@ -35,9 +37,9 @@ export function Section({
         {(eyebrow || title) && (
           <div className="mb-12 text-center">
             {title && (
-              <h2 className="text-gradient mx-auto w-fit pb-1 text-3xl font-semibold tracking-tight text-balance sm:text-4xl">
+              <Title className="text-gradient mx-auto w-fit pb-1 text-3xl font-semibold tracking-tight text-balance sm:text-4xl">
                 {title}
-              </h2>
+              </Title>
             )}
             {description && (
               <p className="mx-auto mt-4 max-w-2xl text-base text-pretty text-muted-foreground">

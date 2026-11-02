@@ -49,6 +49,13 @@ export interface Project {
   size: "large" | "small";
   highlight?: string;
   category: string;
+  featured?: boolean;
+}
+
+export interface FocusItem {
+  title: string;
+  description: string;
+  href: string;
 }
 
 export interface Publication {

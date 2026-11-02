@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { ArrowUpRight, FileDown } from "lucide-react";
 
 import { CopyEmail } from "@/components/copy-email";
@@ -75,9 +76,9 @@ export function Hero() {
         <BlurFade delay={0.3}>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
             <Button asChild size="lg">
-              <a href="#projects">
+              <Link href="/projects">
                 See my work <ArrowUpRight />
-              </a>
+              </Link>
             </Button>
             <Button asChild variant="soft" size="lg">
               <a href="#contact">Get in touch</a>
