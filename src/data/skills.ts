@@ -3,7 +3,7 @@ import type { SkillGroup } from "@/types";
 export const skillGroups: SkillGroup[] = [
   {
     category: "Languages",
-    items: ["Python", "Go", "TypeScript", "Jac (jaclang)", "SQL", "Bash"],
+    items: ["Python", "Go", "Rust", "TypeScript", "Jac (jaclang)", "SQL", "Bash"],
   },
   {
     category: "AI & GenAI",
