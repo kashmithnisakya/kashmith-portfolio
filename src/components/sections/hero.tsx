@@ -37,7 +37,7 @@ export function Hero() {
 
       <div className="mx-auto mt-16 flex max-w-4xl flex-col items-center text-center sm:mt-20">
         <BlurFade>
-          <div className="relative">
+          <div className="flex flex-col items-center gap-4">
             <Image
               src={profile.photo}
               alt={`Portrait of ${profile.name}`}
@@ -46,14 +46,14 @@ export function Hero() {
               priority
               className="size-32 rounded-full object-cover ring-4 ring-card sm:size-36"
             />
-            <p className="absolute -bottom-3 left-1/2 -translate-x-1/2 rounded-full bg-card px-3 py-1.5 text-xs font-medium whitespace-nowrap shadow-md ring-1 ring-border sm:top-5 sm:bottom-auto sm:left-[78%] sm:translate-x-0">
+            <p className="rounded-full bg-card px-3 py-1.5 text-xs font-medium whitespace-nowrap shadow-sm ring-1 ring-border">
               {profile.name}
             </p>
           </div>
         </BlurFade>
 
         <BlurFade delay={0.1}>
-          <p className="mt-10 flex items-center justify-center gap-2 font-mono text-xs text-muted-foreground">
+          <p className="mt-6 flex items-center justify-center gap-2 font-mono text-xs text-muted-foreground">
             <span className="relative flex size-2">
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-signal opacity-60" />
               <span className="relative inline-flex size-2 rounded-full bg-signal" />
