@@ -28,7 +28,10 @@ export default function ProjectsPage() {
           <BlurFade
             key={project.title}
             delay={index * 0.06}
-            className={cn(project.size === "large" && "md:col-span-2")}
+            className={cn(
+              project.size === "large" && "md:col-span-2",
+              project.size === "full" && "md:col-span-2 lg:col-span-3",
+            )}
           >
             <ProjectCard project={project} />
           </BlurFade>
