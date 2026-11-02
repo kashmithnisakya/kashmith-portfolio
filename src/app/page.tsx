@@ -1,30 +1,17 @@
-import { Contact } from "@/components/sections/contact";
-import { Experience } from "@/components/sections/experience";
-import { GitHubActivity } from "@/components/sections/github-activity";
+import { CurrentFocus } from "@/components/sections/current-focus";
+import { FeaturedWork } from "@/components/sections/featured-work";
 import { Hero } from "@/components/sections/hero";
-import { Projects } from "@/components/sections/projects";
-import { Research } from "@/components/sections/research";
-import { Skills } from "@/components/sections/skills";
 import { WorkStrip } from "@/components/sections/work-strip";
-import { Writing } from "@/components/sections/writing";
-import { getGitHubStats } from "@/lib/github";
+import { LatestWriting } from "@/components/sections/writing";
 
-export const revalidate = 3600;
-
-export default async function Home() {
-  const stats = await getGitHubStats();
-
+export default function Home() {
   return (
     <>
       <Hero />
       <WorkStrip />
-      <GitHubActivity stats={stats} />
-      <Projects />
-      <Experience />
-      <Skills />
-      <Research />
-      <Writing />
-      <Contact />
+      <FeaturedWork />
+      <LatestWriting />
+      <CurrentFocus />
     </>
   );
 }

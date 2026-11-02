@@ -11,7 +11,6 @@ export function GitHubActivity({ stats }: { stats: GitHubStats }) {
     <Section
       id="github"
       eyebrow="By the numbers"
-      tone="raised"
       title="GitHub activity, live"
       description="Fetched from the GitHub GraphQL API and revalidated hourly. These are not hand-typed numbers."
     >

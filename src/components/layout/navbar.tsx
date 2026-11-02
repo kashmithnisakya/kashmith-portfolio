@@ -1,6 +1,8 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { FileDown, MenuIcon } from "lucide-react";
 
 import { ThemeToggle } from "@/components/theme-toggle";
@@ -15,21 +17,21 @@ import { profile } from "@/data/profile";
 import { cn } from "@/lib/utils";
 
 const NAV_ITEMS = [
-  { label: "GitHub", id: "github" },
-  { label: "Projects", id: "projects" },
-  { label: "Experience", id: "experience" },
-  { label: "Skills", id: "skills" },
-  { label: "Research", id: "research" },
-  { label: "Writing", id: "writing" },
-  { label: "Contact", id: "contact" },
+  { label: "Projects", href: "/projects" },
+  { label: "Writing", href: "/writing" },
+  { label: "About", href: "/about" },
+  { label: "Now", href: "/now" },
 ];
 
 export function Navbar() {
-  const [active, setActive] = useState<string | null>(null);
+  const pathname = usePathname();
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
-  // The hero has its own top bar, so the pill slides in once that scrolls away.
+  // The home hero has its own top bar, so there the pill slides in once that
+  // scrolls away. Other pages have no top bar and always show it.
+  const visible = pathname !== "/" || scrolled || open;
+
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 120);
     onScroll();
@@ -37,66 +39,42 @@ export function Navbar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  useEffect(() => {
-    const sections = ["home", ...NAV_ITEMS.map((item) => item.id)]
-      .map((id) => document.getElementById(id))
-      .filter((el): el is HTMLElement => el !== null);
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        for (const entry of entries) {
-          if (entry.isIntersecting) {
-            setActive(entry.target.id === "home" ? null : entry.target.id);
-          }
-        }
-      },
-      { rootMargin: "-35% 0px -60% 0px" },
-    );
-
-    sections.forEach((section) => observer.observe(section));
-    return () => observer.disconnect();
-  }, []);
-
   return (
     <header className="pointer-events-none fixed inset-x-0 top-4 z-50 px-4">
       <nav
         aria-label="Main navigation"
         className={cn(
-          "mx-auto flex w-full max-w-4xl items-center justify-between rounded-full border border-border bg-background/80 py-1.5 pr-1.5 pl-4 shadow-lg shadow-black/10 backdrop-blur-xl transition-[opacity,translate] duration-300",
-          scrolled || open
+          "mx-auto flex w-full max-w-2xl items-center justify-between rounded-full border border-border bg-background/80 py-1.5 pr-1.5 pl-4 shadow-lg shadow-black/10 backdrop-blur-xl transition-[opacity,translate] duration-300",
+          visible
             ? "pointer-events-auto translate-y-0 opacity-100"
-            : "-translate-y-4 opacity-0 focus-within:pointer-events-auto focus-within:translate-y-0 focus-within:opacity-100",
+            : "-translate-y-4 opacity-0 has-[:focus-visible]:pointer-events-auto has-[:focus-visible]:translate-y-0 has-[:focus-visible]:opacity-100",
         )}
       >
-        <a
-          href="#home"
-          className="font-mono text-sm font-semibold tracking-tight"
-          onClick={() => setActive(null)}
-        >
+        <Link href="/" className="font-mono text-sm font-semibold tracking-tight">
           kashmith.com
-        </a>
+        </Link>
 
-        <div className="hidden items-center gap-0.5 lg:flex">
+        <div className="hidden items-center gap-0.5 md:flex">
           {NAV_ITEMS.map((item) => (
-            <a
-              key={item.id}
-              href={`#${item.id}`}
-              aria-current={active === item.id ? "true" : undefined}
+            <Link
+              key={item.href}
+              href={item.href}
+              aria-current={pathname === item.href ? "page" : undefined}
               className={cn(
                 "rounded-full px-3 py-1.5 text-sm transition-colors",
-                active === item.id
+                pathname === item.href
                   ? "bg-secondary text-foreground"
                   : "text-muted-foreground hover:text-foreground",
               )}
             >
               {item.label}
-            </a>
+            </Link>
           ))}
         </div>
 
         <div className="flex items-center gap-1.5">
           <ThemeToggle />
-          <Button asChild size="sm" className="hidden lg:inline-flex">
+          <Button asChild size="sm" className="hidden md:inline-flex">
             <a href={profile.resumeUrl} download>
               Resume <FileDown />
             </a>
@@ -107,32 +85,30 @@ export function Navbar() {
               <Button
                 variant="ghost"
                 size="icon"
-                className="lg:hidden"
+                className="md:hidden"
                 aria-label="Open menu"
               >
                 <MenuIcon className="size-5" />
               </Button>
             </SheetTrigger>
             <SheetContent side="right" className="p-6">
-              <SheetTitle className="font-mono text-sm">
-                kashmith.com
-              </SheetTitle>
+              <SheetTitle className="font-mono text-sm">kashmith.com</SheetTitle>
               <div className="mt-4 flex flex-col gap-1">
                 {NAV_ITEMS.map((item) => (
-                  <a
-                    key={item.id}
-                    href={`#${item.id}`}
+                  <Link
+                    key={item.href}
+                    href={item.href}
                     onClick={() => setOpen(false)}
-                    aria-current={active === item.id ? "true" : undefined}
+                    aria-current={pathname === item.href ? "page" : undefined}
                     className={cn(
                       "rounded-lg px-3 py-2.5 text-base transition-colors",
-                      active === item.id
+                      pathname === item.href
                         ? "bg-secondary text-foreground"
                         : "text-muted-foreground hover:text-foreground",
                     )}
                   >
                     {item.label}
-                  </a>
+                  </Link>
                 ))}
                 <Button asChild className="mt-4">
                   <a href={profile.resumeUrl} download>

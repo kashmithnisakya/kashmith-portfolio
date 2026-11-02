@@ -3,6 +3,7 @@ import type { Project } from "@/types";
 export const projects: Project[] = [
   {
     title: "Jaseci Stack",
+    featured: true,
     tagline: "Open-source core contributor (jac-scale, jaclang)",
     description:
       "Core developer of jac-scale, Jac's Kubernetes deployment and scaling layer that takes identical local Jac code to production, auto-provisioning databases, Redis caching, and authentication with zero configuration. Contributor to jaclang, an AI-native language featuring graph-based Object-Spatial Programming with native Python, JavaScript, and C interoperability.",
@@ -37,6 +38,7 @@ export const projects: Project[] = [
   },
   {
     title: "Spenzo",
+    featured: true,
     tagline: "Personal money manager",
     description:
       "Lead backend developer of the Go API behind the mobile and web apps for tracking income, expenses, budgets, and net worth, with an OpenAPI contract, contract tests, and CI/CD from GitHub Actions to Google Cloud Run and Cloud SQL.",
@@ -48,6 +50,7 @@ export const projects: Project[] = [
   },
   {
     title: "Mesh",
+    featured: true,
     tagline: "Realtime team chat",
     description:
       "Main developer of a Slack-style chat product with web, mobile, and desktop clients. A Go modular-monolith backend and WebSocket hub use per-channel sequence numbers to drive message ordering, unread state, and reconnect backfill.",
@@ -59,6 +62,7 @@ export const projects: Project[] = [
   },
   {
     title: "Habitat",
+    featured: true,
     tagline: "A secure home for AI agents on computers and phones",
     description:
       "An open-source design for giving an agent its own persistent space. The agent will run inside WebAssembly with no outside access, and a trusted Rust broker will mediate every request to reach the network, files, models, or secrets. Currently at the design and project skeleton stage.",
