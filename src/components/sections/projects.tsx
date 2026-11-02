@@ -14,7 +14,7 @@ export function Projects() {
       id="projects"
       eyebrow="Selected work"
       title="Projects that ship"
-      description="Agentic AI platforms, generative media pipelines, and published research. Mostly production systems with real users."
+      description="Agentic AI platforms, product backends, open-source infrastructure, and published research. Mostly production systems with real users."
     >
       <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
         {projects.map((project, index) => (

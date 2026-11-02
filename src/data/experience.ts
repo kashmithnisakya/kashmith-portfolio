@@ -9,9 +9,10 @@ export const experience: Experience[] = [
     location: "Ann Arbor, MI, USA",
     mode: "Remote",
     highlights: [
-      "Core contributor to the open-source Jaseci stack (550+ GitHub stars) with 30+ merged PRs, as a major developer of the jac-scale Kubernetes deployment plugin and contributor to the jaclang language.",
+      "Core contributor to the open-source Jaseci stack (950+ GitHub stars) with 70+ merged PRs, as a core developer of the jac-scale Kubernetes deployment and scaling features and contributor to the jaclang language.",
       "Developed and maintained backend infrastructure for Tobu, an AI-powered personal memory platform with integrated LLMs serving 1,000+ users; took the system to production fast enough to support the company's $1.5M raise.",
-      "Built scalable PySpark data pipelines for user analysis and feature optimization, and shipped ML features for image analysis and conversation processing.",
+      "Shipped ML features for image analysis and conversation processing that turn unstructured photos and chats into structured, searchable information, and built scalable PySpark pipelines for user analysis and feature optimization.",
+      "Lead developer of Flowline, an AI-powered project management platform deployed on Kubernetes, and built the Veo 3 image-to-video pipeline behind TLite, live on the App Store.",
     ],
     tech: ["Python", "Jac", "Kubernetes", "LLMs", "PySpark", "FastAPI"],
   },
