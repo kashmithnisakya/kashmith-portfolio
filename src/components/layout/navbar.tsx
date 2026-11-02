@@ -20,6 +20,7 @@ const NAV_ITEMS = [
   { label: "Experience", id: "experience" },
   { label: "Skills", id: "skills" },
   { label: "Research", id: "research" },
+  { label: "Writing", id: "writing" },
   { label: "Contact", id: "contact" },
 ];
 
@@ -61,7 +62,7 @@ export function Navbar() {
       <nav
         aria-label="Main navigation"
         className={cn(
-          "mx-auto flex w-full max-w-3xl items-center justify-between rounded-full border border-border bg-background/80 py-1.5 pr-1.5 pl-4 shadow-lg shadow-black/10 backdrop-blur-xl transition-[opacity,translate] duration-300",
+          "mx-auto flex w-full max-w-4xl items-center justify-between rounded-full border border-border bg-background/80 py-1.5 pr-1.5 pl-4 shadow-lg shadow-black/10 backdrop-blur-xl transition-[opacity,translate] duration-300",
           scrolled || open
             ? "pointer-events-auto translate-y-0 opacity-100"
             : "-translate-y-4 opacity-0 focus-within:pointer-events-auto focus-within:translate-y-0 focus-within:opacity-100",
@@ -75,7 +76,7 @@ export function Navbar() {
           kashmith.com
         </a>
 
-        <div className="hidden items-center gap-0.5 md:flex">
+        <div className="hidden items-center gap-0.5 lg:flex">
           {NAV_ITEMS.map((item) => (
             <a
               key={item.id}
@@ -95,7 +96,7 @@ export function Navbar() {
 
         <div className="flex items-center gap-1.5">
           <ThemeToggle />
-          <Button asChild size="sm" className="hidden md:inline-flex">
+          <Button asChild size="sm" className="hidden lg:inline-flex">
             <a href={profile.resumeUrl} download>
               Resume <FileDown />
             </a>
@@ -106,7 +107,7 @@ export function Navbar() {
               <Button
                 variant="ghost"
                 size="icon"
-                className="md:hidden"
+                className="lg:hidden"
                 aria-label="Open menu"
               >
                 <MenuIcon className="size-5" />

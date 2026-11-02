@@ -61,6 +61,13 @@ export interface Publication {
   summary: string;
 }
 
+export interface Article {
+  title: string;
+  summary: string;
+  date: string;
+  href: string;
+}
+
 export interface SkillGroup {
   category: string;
   items: string[];

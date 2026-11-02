@@ -46,7 +46,7 @@ export function Hero() {
               priority
               className="size-32 rounded-full object-cover ring-4 ring-card sm:size-36"
             />
-            <p className="absolute -bottom-3 left-1/2 -translate-x-1/2 -rotate-6 rounded-full bg-card px-3 py-1.5 text-xs font-medium whitespace-nowrap shadow-md ring-1 ring-border sm:top-5 sm:bottom-auto sm:left-[78%] sm:translate-x-0">
+            <p className="absolute -bottom-3 left-1/2 -translate-x-1/2 rounded-full bg-card px-3 py-1.5 text-xs font-medium whitespace-nowrap shadow-md ring-1 ring-border sm:top-5 sm:bottom-auto sm:left-[78%] sm:translate-x-0">
               {profile.name}
             </p>
           </div>
