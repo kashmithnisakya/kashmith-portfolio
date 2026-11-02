@@ -84,6 +84,16 @@ export const projects: Project[] = [
     category: "Open source",
   },
   {
+    title: "Alfred",
+    tagline: "A personal AI desktop agent",
+    description:
+      "An AI agent designed to run natively on macOS, Windows, and Linux. You will talk or type to it, and it will get things done on your computer with your permission, through a Rust policy layer the model can't influence. Currently in its foundation phase.",
+    tech: ["Rust", "Tauri", "React", "TypeScript"],
+    size: "small",
+    highlight: "Early development",
+    category: "Personal project",
+  },
+  {
     title: "TLite (Tobu Lite)",
     tagline: "AI image-to-video generation",
     description:
@@ -95,16 +105,6 @@ export const projects: Project[] = [
     category: "Industry · Jaseci Lab",
   },
   {
-    title: "Deep Research Assistant",
-    tagline: "Agentic AI research application",
-    description:
-      "Production-grade agentic app for analytical question answering. Uses LangGraph multi-step reasoning with web search and Chroma vector retrieval, deployed via Docker with a Streamlit interface.",
-    tech: ["LangGraph", "Chroma", "Docker", "Streamlit"],
-    github: "https://github.com/kashmithnisakya/Deep-Research-Assistan",
-    size: "small",
-    category: "Agentic AI",
-  },
-  {
     title: "Einstein Pro",
     tagline: "AI patent generation & document management",
     description:
@@ -114,13 +114,23 @@ export const projects: Project[] = [
     category: "Industry",
   },
   {
+    title: "Deep Research Assistant",
+    tagline: "Agentic AI research application",
+    description:
+      "Production-grade agentic app for analytical question answering. Uses LangGraph multi-step reasoning with web search and Chroma vector retrieval, deployed via Docker with a Streamlit interface.",
+    tech: ["LangGraph", "Chroma", "Docker", "Streamlit"],
+    github: "https://github.com/kashmithnisakya/Deep-Research-Assistan",
+    size: "large",
+    category: "Agentic AI",
+  },
+  {
     title: "Self-Adaptive NILM",
     tagline: "Deep learning research → 2 IEEE publications",
     description:
       "Designed WaveNet/CNN models with ensemble methods for appliance-level power prediction; applied pseudo-labeling and transfer learning for self-adaptation to appliance aging without retraining, reaching over 97% accuracy on a six-year dataset. Published at IEEE World AI IoT Congress 2024 and in IEEE Access.",
     tech: ["PyTorch", "WaveNet", "Transfer Learning"],
     github: "https://github.com/kashmithnisakya/Self_Adaptive_NILM_Web",
-    size: "large",
+    size: "full",
     highlight: "Best Presented Paper · IEEE AIIoT 2024",
     category: "Research",
   },
