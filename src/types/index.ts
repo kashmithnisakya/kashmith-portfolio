@@ -72,9 +72,3 @@ export interface SkillGroup {
   category: string;
   items: string[];
 }
-
-export interface Certification {
-  title: string;
-  issuer: string;
-  status: "completed" | "in-progress";
-}

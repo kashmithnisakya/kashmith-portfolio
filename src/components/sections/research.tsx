@@ -1,10 +1,9 @@
-import { BadgeCheck, Clock, ExternalLink, Trophy } from "lucide-react";
+import { ExternalLink, Trophy } from "lucide-react";
 
 import { Section } from "@/components/layout/section";
 import { Badge } from "@/components/ui/badge";
 import { BlurFade } from "@/components/ui/blur-fade";
 import { Card } from "@/components/ui/card";
-import { certifications } from "@/data/certifications";
 import { publications } from "@/data/publications";
 
 export function Research() {
@@ -12,7 +11,7 @@ export function Research() {
     <Section
       id="research"
       tone="raised"
-      eyebrow="Research & credentials"
+      eyebrow="Research"
       title="Publications"
       description="Peer-reviewed work on self-adaptive deep learning for non-intrusive load monitoring."
     >
@@ -49,36 +48,6 @@ export function Research() {
           </BlurFade>
         ))}
       </div>
-
-      <BlurFade delay={0.15}>
-        <h3 className="mt-14 mb-6 text-center font-mono text-xs tracking-[0.2em] text-muted-foreground uppercase">
-          Certifications
-        </h3>
-        <div className="grid gap-4 sm:grid-cols-2">
-          {certifications.map((certification) => (
-            <div
-              key={certification.title}
-              className="flex items-start justify-between gap-3 rounded-2xl border border-border bg-card p-4"
-            >
-              <div>
-                <p className="text-sm font-medium">{certification.title}</p>
-                <p className="mt-0.5 text-xs text-muted-foreground">
-                  {certification.issuer}
-                </p>
-              </div>
-              {certification.status === "completed" ? (
-                <Badge variant="accent" className="shrink-0">
-                  <BadgeCheck /> Completed
-                </Badge>
-              ) : (
-                <Badge variant="outline" className="shrink-0">
-                  <Clock /> In progress
-                </Badge>
-              )}
-            </div>
-          ))}
-        </div>
-      </BlurFade>
     </Section>
   );
 }
